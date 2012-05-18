@@ -22,7 +22,8 @@ function loaded() {
 //        document.addEventListener('DOMContentLoaded', loaded, false);
 
 function configureIScroll(wrapperWidth) {
-    $("#scroller li").css("width", wrapperWidth + "px");
+    var scrollerLiWidth = wrapperWidth - 4;
+    $("#scroller li").css("width", scrollerLiWidth + "px");
     $("#wrapper").css("width", wrapperWidth + "px");
     var docTitleWidth = wrapperWidth - 50;
     $("#docTitle").css("width", docTitleWidth + "px");
