@@ -39,6 +39,7 @@ function scrollDocumentDetails() {
     $("#documentDetailsScroller").css("width", containerWidth)
     $("#documentDetailsWrapper").css("height", containerHeight)
 
+
     documentDetailsScroll = new iScroll('documentDetailsWrapper', {
         vScrollbar:true,
         hScroll:false,

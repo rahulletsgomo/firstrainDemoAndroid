@@ -5,33 +5,32 @@ function goBack() {
 
 function manipulateMenu() {
     $("#openMenu").toggle(function () {
-        console.log("Inside the first condition !!!!")
         showMenu()
     }, function () {
-        console.log("Inside the second condition !!!!")
         hideMenu()
     })
 }
 
 function showMenu() {
-    var menuHeight = $("#landingPage").css("height");
+    var menuHeight = parseInt($("#menuItems").css("height").split("px", 1));
+    menuHeight = menuHeight + 1;
+//    menuHeight += "px";
+    console.log(">>>>> Menu Items Height : " + menuHeight)
     $("#menu").css({
         visibility:"visible",
         height:menuHeight
     });
-    $("#landingPage").css({
-        position:"absolute",
-        left:"150px"
-    });
+//    $("#landingPage").css({
+//        position:"absolute",
+//        left:"150px"
+//    });
 }
 
 function hideMenu() {
-    console.log("Inside hideMenu function ...")
-    console.log("Landing Page left position : " + $("#landingPage").css("left"))
-    $("#landingPage").css({
-        position:"absolute",
-        left:"0px"
-    });
+//    $("#landingPage").css({
+//        position:"absolute",
+//        left:"0px"
+//    });
     $("#menu").css({
         visibility:"hidden"
     })
